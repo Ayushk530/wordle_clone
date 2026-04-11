@@ -16,14 +16,7 @@ for word,meaning in all_words_items:
 print (len(all_words_cleaned.keys()))
 print("cleaning done")
 
-'''
-#rewriting edition dictionary in a new binary file.
-with open("D:/12E yasser and swarup project/worlde_clone-main (1)/worlde_clone-main/dictionary_of_words_cleaned.txt", "wb") as new_dict:
-         pickle.dump(all_words_cleaned,new_dict)
 
-print(all_words_cleaned)
-print("end of program")
-'''
 #--------------------------------------------------------------------------------------------
 #to segregate the words in the dictionary based on number of letters.
 while True :
@@ -39,21 +32,4 @@ while True :
             if (len(i)) == int(no_of_ltr):
                 words.write(i+'\n')
 
-quit()
-#-----------------------------------------------------------------------------------------
-#to establish the connection between pytrends and google trends.
 
-pytrends = TrendReq(hl='en-US', tz=360) 
-
-#list of keywords to get data 
-lst_words = list(all_words_cleaned.keys())
-                
-#building payload which will be queried to google trends.(queries all words through the list)
-pytrends.build_payload(lst_words,timeframe='today 12-m') 
-
-#sending request to google trends
-data = pytrends.interest_over_time()
-#print(data) 
-       
-#dont understand reset index - to be checked later.
-data = data.reset_index() 
