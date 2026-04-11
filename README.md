@@ -373,15 +373,11 @@ STATS_FILE = "game_stats.json" # Stats save file
 Here are some cool features we might add someday! 🌟
 
 - 🌍 **Multiplayer Mode**: Compete with friends online
-- 🏆 **Leaderboards**: Global rankings (for real bragging rights!)
 - 📱 **Mobile App**: Play on iOS/Android with GUI
-- 🌐 **Web Version**: Browser-based game with Flask/Django
 - 🤖 **AI Opponent**: Get hints or play against AI
 - 🎨 **Dark Mode**: Eye-friendly theme for night gaming
 - 🔊 **Sound Effects**: Audio feedback for correct/wrong guesses
 - 🌍 **Multi-Language**: Support for different languages & word lists
-- 📊 **Advanced Analytics**: Detailed stats, graphs, performance tracking
-- 🎲 **Endless Mode**: Keep playing without limits
 - ⏱️ **Speedrun Mode**: Race against the clock!
 - 🧩 **Daily Challenge**: Same word for all players (like real Wordle)
 
@@ -391,7 +387,7 @@ Here are some cool features we might add someday! 🌟
 
 This project was created with ❤️ as a fun learning exercise!
 
-**Main Developer**: [@MrWhoCoded](https://github.com/MrWhoCoded) 🚀
+**Developers**: [@MrWhoCoded](https://github.com/MrWhoCoded), [@swarup-nandakumar](https://github.com/swarup-nandakumar) 🚀
 
 Want to contribute? Fork the repo, make your changes, and send a PR! We love community contributions! 💪
 
