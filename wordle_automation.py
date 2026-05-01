@@ -88,3 +88,8 @@ dif_lvl = "hard"
 
 #hint_lst = hints(guess_word,wordle_word)
 #print(hint_lst)
+
+import time
+print("Wordle Backend is running in Docker!")
+while True:
+    time.sleep(60)
