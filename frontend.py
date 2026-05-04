@@ -106,6 +106,7 @@ def entry_disable(row):
                 attempt_box.config(state = DISABLED)
         label_text = "You won"
         game_over()
+    #hii
         
     else: 
         if (row[-1]+1) < no_of_words.get() + 1:    

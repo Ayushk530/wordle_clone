@@ -7,7 +7,7 @@ import json
 import random
 
 #NOTE: can add meanings also as a clue....maybe
-# hello
+
 #to get file of words(NOTE: should be under condition)
 def open_word_file(no_of_ltr,dif_lvl):
     global file_name, num_words
