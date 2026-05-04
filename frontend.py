@@ -8,6 +8,7 @@ hints = []
 counter = 0
 attempt_words = []
 
+#new comment
 def window_switcher(): 
     """
     Switches start to the main game window and picks a random word for the specified
