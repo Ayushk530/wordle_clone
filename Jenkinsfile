@@ -7,7 +7,7 @@ pipeline {
     }
 
     triggers {
-        pollSCM('H/2 * * * *') // Automatically poll for changes in the Git repository every 2 minutes
+        pollSCM('* * * * *') // Automatically poll for changes in the Git repository every 1 minute (Jenkins minimum)
     }
 
     stages {
