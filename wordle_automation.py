@@ -93,4 +93,4 @@ if __name__ == '__main__':
     import time
     print("Wordle Backend is running in Docker!")
     while True:
-        time.sleep(60)
+        time.sleep(30)
