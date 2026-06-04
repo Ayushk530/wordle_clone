@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        // Define the absolute path to your base Python installation
+        BASE_PYTHON = 'C:\\Users\\Ayush Khanuja\\AppData\\Local\\Programs\\Python\\Python312\\python.exe'
+    }
+
     triggers {
         pollSCM('H/2 * * * *') // Automatically poll for changes in the Git repository every 2 minutes
     }
@@ -11,12 +16,11 @@ pipeline {
                 echo 'Setting up Python Virtual Environment...'
                 bat '''
                     if not exist venv (
-                        python -m venv venv
+                        "%BASE_PYTHON%" -m venv venv
                     )
-                    call venv\\Scripts\\activate
-                    python -m pip install --upgrade pip
-                    pip install -r requirements.txt
-                    pip install flake8 pyinstaller
+                    venv\\Scripts\\python -m pip install --upgrade pip
+                    venv\\Scripts\\pip install -r requirements.txt
+                    venv\\Scripts\\pip install flake8 pyinstaller psutil
                 '''
             }
         }
@@ -25,8 +29,7 @@ pipeline {
             steps {
                 echo 'Running syntax and code quality checks (flake8)...'
                 bat '''
-                    call venv\\Scripts\\activate
-                    flake8 --exclude=venv,"wordle github" --ignore=E,W,F401,F403,F405,F824,F841 .
+                    venv\\Scripts\\flake8 --exclude=venv,"wordle github" --ignore=E,W,F401,F403,F405,F824,F841 .
                 '''
             }
         }
@@ -35,8 +38,7 @@ pipeline {
             steps {
                 echo 'Running automated unit tests...'
                 bat '''
-                    call venv\\Scripts\\activate
-                    python -m unittest discover -s tests
+                    venv\\Scripts\\python -m unittest discover -s tests
                 '''
             }
         }
@@ -45,8 +47,7 @@ pipeline {
             steps {
                 echo 'Packaging tkinter application into a standalone executable...'
                 bat '''
-                    call venv\\Scripts\\activate
-                    pyinstaller --clean --noconsole --onefile --icon=Wordle_2021_Icon.ico frontend.py
+                    venv\\Scripts\\pyinstaller --clean --noconsole --onefile --icon=Wordle_2021_Icon.ico frontend.py
                 '''
             }
         }
@@ -80,8 +81,7 @@ pipeline {
             steps {
                 echo 'Running health check and resource monitoring on deployment...'
                 bat '''
-                    call venv\\Scripts\\activate
-                    python monitor.py C:\\WordleAppProduction
+                    venv\\Scripts\\python monitor.py C:\\WordleAppProduction
                     copy /Y C:\\WordleAppProduction\\monitoring_report.json .
                 '''
             }
