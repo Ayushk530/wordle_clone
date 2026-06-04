@@ -1,0 +1,20 @@
+# Virtual Environment
+venv/
+ENV/
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# PyInstaller Build Artifacts
+build/
+dist/
+*.spec
+
+# Local IDE/Environment settings
+.vscode/
+.idea/
+.system_generated/
+monitoring_report.json

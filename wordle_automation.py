@@ -76,20 +76,21 @@ def hints(guess_word,wordle_word):
 #no_of_ltr - number of letters in the word
 #guess_word - word guessed by user
 
-no_of_ltr = '7'
-guess_word = "alter"
-dif_lvl = "hard"
+if __name__ == '__main__':
+    no_of_ltr = '7'
+    guess_word = "alter"
+    dif_lvl = "hard"
 
-#file,all_words = open_word_file(no_of_ltr,dif_lvl)
-#print(pick_word(file))
+    #file,all_words = open_word_file(no_of_ltr,dif_lvl)
+    #print(pick_word(file))
 
-#meaning = all_words[wordle_word]
-#print(meaning)
+    #meaning = all_words[wordle_word]
+    #print(meaning)
 
-#hint_lst = hints(guess_word,wordle_word)
-#print(hint_lst)
+    #hint_lst = hints(guess_word,wordle_word)
+    #print(hint_lst)
 
-import time
-print("Wordle Backend is running in Docker!")
-while True:
-    time.sleep(60)
+    import time
+    print("Wordle Backend is running in Docker!")
+    while True:
+        time.sleep(60)
