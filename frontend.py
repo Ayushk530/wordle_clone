@@ -7,7 +7,7 @@ complete_attempt_word = ""
 hints = []
 counter = 0
 attempt_words = []
-
+#hi
 #new comment
 def window_switcher(): 
     """
