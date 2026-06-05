@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import ttk
 import csv              #needed for the geometry of boxes
 import wordle_automation
-
+#newcomment
 complete_attempt_word = ""
 hints = []
 counter = 0
